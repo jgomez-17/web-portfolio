@@ -1,0 +1,131 @@
+.experience__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    
+}
+.experience__container h4 {
+    font-size: 0.8rem;
+}
+
+.experience__container > div {
+    background: var(--color-bg-variant);
+    padding: 1rem 0.9rem;
+    border-radius: 2rem;
+    border: 1px solid transparent; 
+    transition: var(--transition);
+}
+
+
+.experience__container > div:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+    cursor: default;
+}
+
+.experience__container > div h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.experience__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 2rem;
+}
+
+.experience__details {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+.experience__details small {
+    margin: 0;
+    font-size: 0.5rem;
+    color: rgb(72, 72, 72);
+}
+
+.experience__details-icon {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--color-bg);
+    transition: var(--transition);
+}
+.frontend:hover .experience__details-icon {
+    animation: spin 15s infinite linear;
+    font-size: 1.6rem;
+}
+.backend:hover .experience__details-icon {
+    animation: spin 15s infinite linear;
+    font-size: 1.6rem;
+}
+
+.text__technologies h4 {
+    margin: 0;
+}
+
+
+/* @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } */
+
+  /* ICONS COLOR */
+
+   /* IFRONTEND */
+  .frontend:hover .angular {color: rgb(201, 0, 0);}
+  .frontend:hover .js {color: rgba(206, 189, 0, 0.808);}
+  .frontend:hover .ts {color: rgb(0, 123, 255);}
+  .frontend:hover .react {color: rgb(0, 68, 255);}
+  .frontend:hover .bootstrap {color: rgb(81, 29, 116);}
+  .frontend:hover .html {color: orangered;}
+  .frontend:hover .css {color: rgb(0, 110, 255);}
+  .frontend:hover .astro {color: black;}
+
+   /*  BACKEND */
+  .backend:hover .nodejs {color: rgb(15, 114, 55);}
+  .backend:hover .expressjs {color: black;}
+  .backend:hover .mysql {color: rgb(46, 67, 132);}
+  .backend:hover .java {color: rgba(161, 138, 23, 0.735);}
+
+   /*  OTHER TECHNOLOGIES */
+  .backend:hover .git {color: rgba(224, 55, 4, 0.963);}
+  .backend:hover .linux {color: rgba(224, 224, 224, 0.963);}
+
+/* MEDIA QUERIES ( MEDIUM DEVICES) */
+@media screen and (max-width: 1024px) {
+
+    .experience__container {
+        grid-template-columns: 1fr;
+    }
+
+    .experience__container > div {
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+
+    .experience__content {
+        padding: 1rem;
+    }
+}
+
+/* MEDIA QUERIES ( SMALL DEVICES) */
+@media screen and (max-width: 600px) {
+    .experience__container{
+        margin: 2rem;
+        gap: 1rem;
+    }
+
+    .experience__container > div {
+        width: 100%;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+    }
+}
